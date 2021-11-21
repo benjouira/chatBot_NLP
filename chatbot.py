@@ -54,3 +54,23 @@ def response(user_response):
   else:
     robo_response=robo_response+sent_tokens[idx]
     return robo_response
+  
+#Step 6 : Programming Start and End points for conversation
+flag=True
+print("Can I help you ?")
+while flag==True:
+  user_response=input()
+  user_response=user_response.lower()
+  if (user_response!='bye'):
+    if (user_response=='thanks'):
+      flag=False
+      print('You are welcome')
+    else:
+      if (greeting(user_response)!=None):
+        print(greeting(user_response))
+      else:
+        print(response(user_response))
+        sent_tokens.remove(user_response)
+  else:
+    flag=False
+    print('bye')
