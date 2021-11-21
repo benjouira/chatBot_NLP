@@ -26,3 +26,11 @@ def LemNormalize(text):
   return LemTokens(nltk.word_tokenize(text.lower().translate(remove_punct_dict)))
 
 #Step 4 : Programming a greet response
+Greeting_Inputs=['hello','hi','hey','bjr']
+Greeting_Responses=['hi','hello','hi there']
+def greeting(sentence):
+  for word in sentence.split():
+    if word.lower() in Greeting_Inputs:
+      return random.choice(Greeting_Responses)
+    
+#Step 5 : Generate responses (first : import scikit learn libraries)
