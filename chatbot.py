@@ -33,4 +33,6 @@ def greeting(sentence):
     if word.lower() in Greeting_Inputs:
       return random.choice(Greeting_Responses)
     
-#Step 5 : Generate responses (first : import scikit learn libraries)
+#Step 5.1 : Generate responses (first : import scikit learn libraries)
+from sklearn.feature_extraction.text import TfidfVectorizer
+from sklearn.metrics.pairwise import cosine_similarity
