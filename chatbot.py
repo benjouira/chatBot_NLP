@@ -74,5 +74,3 @@ while flag==True:
   else:
     flag=False
     print('bye')
-
-#
